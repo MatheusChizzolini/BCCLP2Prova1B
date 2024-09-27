@@ -13,7 +13,11 @@ export default function GridCandidatos(props) {
                 gap: '20px'
             }}>
                 {props.listaCandidatos.map((candidato) => (
-                    <Candidato key={candidato.id} candidato={candidato} />
+                    <Candidato key={candidato.id}
+                        candidato={candidato}
+                        setDetalharCandidato={props.setDetalharCandidato}
+                        setCandidatoSel={props.setCandidatoSel}
+                    />
                 ))}
             </div>
         )
